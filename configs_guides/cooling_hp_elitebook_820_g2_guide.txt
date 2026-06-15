@@ -1,0 +1,9 @@
+1. yay -S nbfc-linux
+2. nbfc config --list | grep -i hp
+3. sudo nbfc config --set "..."
+4. sudo nbfc start
+5. nbfc set --auto
+6. nbfc status
+7. sudo systemctl enable nbfc_service
+
+other: watch nbfc status

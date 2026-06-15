@@ -1,0 +1,4 @@
+1. mkdir -p ~/.stardict/dic/
+2. yay -S stardict-full-eng-rus; yay -S stardict-full-rus-eng; yay -S dict-freedict-eng-rus; yay -S dict-freedict-rus-eng;
+
+other: sdcv -l

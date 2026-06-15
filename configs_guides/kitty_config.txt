@@ -1,0 +1,22 @@
+nvim ~/.config/kitty/kitty.conf
+
+{
+font_family monospace
+font_size 13.0
+
+window_padding_width 5
+
+background_opacity 1
+
+foreground #ffffff
+background #000000
+
+cursor_shape block
+cursor_blink yes
+
+scrollback_lines 10000
+
+confirm_os_window_close 0
+
+enable_audio_bell no
+}

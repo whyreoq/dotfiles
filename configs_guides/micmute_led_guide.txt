@@ -1,0 +1,4 @@
+1. ls /sys/class/leds/
+2. echo 0 | sudo tee /sys/class/leds/.../brightness
+3. sudo nvim /etc/udev/rules.d/99-stop-micmute-flash.rules
+4. ACTION=="add", SUBSYSTEM=="leds", KERNEL=="...", ATTR{brightness}="0"

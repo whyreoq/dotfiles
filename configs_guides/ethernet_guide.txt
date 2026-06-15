@@ -1,0 +1,12 @@
+1. sudo nvim /etc/systemd/network/20-ethernet.network
+2. sudo systemctl enable --now systemd-networkd
+3. sudo systemctl enable --now systemd-resolved
+4. sudo networkctl renew ... (... - ip link)
+
+{
+[Match]
+Name=en* eth*
+
+[Network]
+DHCP=yes
+}

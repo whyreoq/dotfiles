@@ -1,0 +1,22 @@
+1. sudo nvim /etc/systemd/logind.conf
+2. comment out all 'handlelidswitch' entries
+3. sudo systemctl restart systemd-logind
+4. nvim ~/.lock_screen.sh
+5. chmod +x ~/.lock_screen.sh
+
+{
+#!/bin/bash
+
+OLD_LAYOUT=$(setxkbmap -query | grep layout | awk '{print $2}')
+
+setxkbmap us
+
+FORK_FLAG=""
+if [ "$1" = "nofork" ]; then
+    FORK_FLAG="-n"
+fi
+
+i3lock $FORK_FLAG -c 111111
+
+setxkbmap us,ru -option "grp:alt_shift_toggle"
+}

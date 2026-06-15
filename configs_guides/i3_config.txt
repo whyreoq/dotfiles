@@ -1,0 +1,34 @@
+~/.config/i3/config
+
+{
+# my settings
+#
+default_border pixel 0
+default_floating_border pixel 0
+
+#
+bindsym $mod+Shift+z exec --no-startup-id ksnip -r
+bindsym Print exec --no-startup-id scrot -s ~/Screenshot/%Y-%m-%d-%H%M%S_screenshot.png
+
+# 
+exec --no-startup-id setxkbmap -layout us,ru -option "grp:alt_shift_toggle"
+
+#
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
+#
+bindsym $mod+Shift+s exec firefox https://github.com/
+bindsym $mod+Shift+a exec firefox https://google.com/
+bindsym $mod+Shift+d exec firefox https://leetcode.com/problemset/
+bindsym $mod+Shift+p exec kitty --directory /home/whr/Programming/
+bindsym $mod+Shift+o exec kitty --directory /home/whr/Other/
+bindsym $mod+Shift+i exec kitty --directory /home/whr/English/
+bindsym $mod+Shift+u exec kitty --directory /home/whr/Screenshot/
+bindsym $mod+Shift+y exec kitty --directory /home/whr/Downloads/
+bindsym $mod+Shift+t exec kitty --directory /home/whr/Notes/
+
+#
+bindsym $mod+Shift+m exec --no-startup-id ~/.lock_screen.sh
+exec_always --no-startup-id "killall xss-lock; xss-lock --transfer-sleep-lock -- ~/.lock_screen.sh"
+}

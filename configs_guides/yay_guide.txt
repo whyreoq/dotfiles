@@ -1,0 +1,7 @@
+https://aur.archlinux.org/packages/yay
+
+1. sudo pacman -S --needed git base-devel
+2. git clone ...
+3. cd yay
+4. makepkg -si
+5. rm -rf yay

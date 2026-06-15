@@ -1,0 +1,5 @@
+1. sudo pacman -S tlp powertop 
+2. sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+3. sudo systemctl enable --now tlp
+4. tlp-stat -s
+5. sudo powertop --calibrate
